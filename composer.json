@@ -1,0 +1,12 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Models\\": "app/models/"
+        }
+    },
+    "require": {
+        "aws/aws-sdk-php": "^3.209",
+        "phpmailer/phpmailer": "^6.5"
+    }
+}
