@@ -6,7 +6,7 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-    function Send_Mail($to, $subject, $body)
+    function sendmail($to, $subject, $body)
     {
         $from = "jefferson.chaves@ifpr.edu.br";
         $mail = new PHPMailer();
@@ -34,4 +34,8 @@
     $to = "jefferson.chaves@ifpr.edu.br";
     $subject = "Test Mail Subject";
     $body = "Hi<br/>Test Mail<br/>Amazon SES"; // HTML  tags
-    Send_Mail($to,$subject,$body);
+    if (sendmail($to,$subject,$body)) {
+        echo "deu certo";
+    } else {
+        echo "deu errado";
+    }
